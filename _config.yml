@@ -5,10 +5,10 @@
 
 # Site
 locale: "ko-KR"
-title: "Dance First MACHINE LEARNING"
+title: "dance first MACHINE LEARNING"
 subtitle:
 description: "데이터와 머신러닝 공부하는 블로그"
-author: 최규형
+author: Kyuhyung Choi (choigww)
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: ko
 date_format: '%Y-%m-%d'
@@ -92,7 +92,7 @@ rss:
 since: 2021
 
 # icon between year and author @Footer
-authoricon: heart
+authoricon: android
 
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
@@ -121,10 +121,10 @@ index_with_subtitle: false
 menu:
   home: /
   categories: /categories/
-  archives: /archives/
+  #archives: /archives/
   tags: /tags/
   about: /about/
-  sitemap: /sitemap.xml
+  #sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -139,10 +139,10 @@ menu_icons:
   home: home
   about: user
   categories: th
-  schedule: calendar
+  #schedule: calendar
   tags: tags
-  archives: archive
-  sitemap: sitemap
+  #archives: archive
+  #sitemap: sitemap
   commonweal: heartbeat
 
 
