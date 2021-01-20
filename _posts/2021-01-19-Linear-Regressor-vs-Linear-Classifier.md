@@ -1,9 +1,11 @@
 ---
+
 title: Linear Regressor vs. Linear Classifier
 date: 2021-01-19 22:50:09
 categories:
 - Machine Learning
-
+tags:
+- Bar
 ---
 
 
@@ -18,14 +20,13 @@ K-mooc, cau, [딥러닝의 깊이 있는 이해를 위한 머신러닝](http://w
 
 ## 1. **Linear Regression Model의 학습 방법은 왜 Linear Classification Model에 부적합한가** 
 
-**Linear Regression Model이 해결하려는 문제**
+**1-1. Linear Regression Model이 해결하려는 문제**
 
 Linear Regressor는 0, 1 등 discrete하게 구분된 소수의 라벨을 구하는 것이 아닌, 0에서 100 사이의 무수히 많은 연속적인 실수 라벨을 갖을 때 적용하는 방법이다. 예를 들어, 어떤 사람의 교육 기간을 특징 x값으로, 연수입을 라벨 y값으로 가질 때의 상관관계를 표현하는 문제에 적합하다.
 
 
 
-**1-1. Linear Regression Model의 학습 방법**Linear Regression Model은 연속적인 실수 라벨에 대하여 최대한 정확한 예측치를 출력하는 것을 목표로 한다. 이러한 문제를 해결하기 위해 Linear Regression Model은 학습의 척도로서 실제 라벨 값과 예측치 간의 차이를 최소화하는 Least Square를 가장 기본적인 형태로 채택한다.
-
+**1-2. Linear Regression Model의 학습 방법**Linear Regression Model은 연속적인 실수 라벨에 대하여 최대한 정확한 예측치를 출력하는 것을 목표로 한다. 이러한 문제를 해결하기 위해 Linear Regression Model은 학습의 척도로서 실제 라벨 값과 예측치 간의 차이를 최소화하는 Least Square를 가장 기본적인 형태로 채택한다.
 
 $$
 f(w) = \sum_{i=1}^{n}(wx_{i}-y_{i})^2
@@ -67,9 +68,9 @@ Linear Classifier는 Linear Regressor와 같이 w*x의 형태로 예측값을 �
 위 예시를 기준으로 Least Square 척도를 Linear Classification Model에 적용한다면, 라벨은 -1과 1로 정해져 있으나 예측치의 범위는 제한이 없으므로 에러가 과도하게 측정되는 문제가 생긴다. 동일한 라벨이더라도 라벨 1을 갖는 예측치 0.1에 비하여 라벨 1을 갖는 예측치 9081은 지나치게 높은 오차를 지니게 된다. 이 경우, 모델은 예측치 9081에 대한 오차를 최소화시키는 w를 찾으려 할 것이다.
 
 
-**2. 분류 문제에 대한 Linear Classification Model 학습 최적화 방법**
-위와 같은 문제는 예측치 범위를 제한할 수 없는 Linear Model의 한계에 기인한다. 이 문제를 해결하기 위하여 등장한 것이 0-1 Loss Function이다. Least Square의 결과에 대하여 0-1 Loss Function을 적용하면, Model은 예측치와 실제값이 동일할 때 0, 동일하지 않을 때 1을 출력한다. 
 
+## **2. 분류 문제에 대한 Linear Classification Model 학습 최적화 방법**
+위와 같은 문제는 예측치 범위를 제한할 수 없는 Linear Model의 한계에 기인한다. 이 문제를 해결하기 위하여 등장한 것이 0-1 Loss Function이다. Least Square의 결과에 대하여 0-1 Loss Function을 적용하면, Model은 예측치와 실제값이 동일할 때 0, 동일하지 않을 때 1을 출력한다. 
 
 $$
 ||\hat{y}-y||_0
