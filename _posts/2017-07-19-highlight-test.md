@@ -43,6 +43,12 @@ def foo
 end
 {% endhighlight %}
 
+{% highlight python %}
+def foo
+  puts 'foofofofo'
+end
+{% endhighlight %}
+
 ```c++
 #include <iostream>
 
