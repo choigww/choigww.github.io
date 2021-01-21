@@ -189,7 +189,7 @@ font:
   posts:
     external: true
     family:
-    size: 17
+    size: 17px
 
   # Font settings for Logo
   # Fallback to `global` font settings.
@@ -197,7 +197,7 @@ font:
   logo:
     external: true
     family:
-    size: 20
+    size: 20px
 
   # Font settings for <code> and code blocks.
   codes:
