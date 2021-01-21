@@ -2,11 +2,12 @@
 title: Write Code Every Day
 date: 2021-01-21 08:46:49
 categories:
-- Essay
+- Soft Skill
 tags:
-- mindset
-- habit
-- side-project
+- 마인드셋
+- 습관
+- 사이드프로젝트
+- 소프트스킬
 ---
 
 매일매일 코드를 작성하라. 개발자에게 사이드 프로젝트는 숙명과 같고, 이는 언제나 본업과 일 바깥의 삶과 시간을 조율해야 함을 의미합니다. 이번 포스팅은 사이드 프로젝트와 워크라이프 밸런스에 관한 John Resig의 이야기를 소개합니다.
