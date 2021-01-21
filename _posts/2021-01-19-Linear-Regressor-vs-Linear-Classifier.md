@@ -118,7 +118,9 @@ $$
 
 
 
-K-mooc, cau, [딥러닝의 깊이 있는 이해를 위한 머신러닝](http://www.kmooc.kr/courses/course-v1:CAUk+CAU_A02+2020_1/about), 최종원 교수님
+---
+
+K-mooc, [딥러닝의 깊이 있는 이해를 위한 머신러닝](http://www.kmooc.kr/courses/course-v1:CAUk+CAU_A02+2020_1/about), 중앙대학교 첨단영상대학원 영상학과 최종원 교수님
 
 제출자 최규형 (choigww) 2021/01/19
 

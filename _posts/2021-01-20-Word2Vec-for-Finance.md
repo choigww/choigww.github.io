@@ -5,6 +5,7 @@ categories:
 - Machine Learning
 - Finance
 tags:
+- NLP
 - 자연어처리
 - 머신러닝
 - Word2Vec
@@ -488,6 +489,6 @@ $$
 
 ---
 
-K-mooc, cau, [금융 AI](http://www.kmooc.kr/courses/course-v1:CAUk+CAU_AI03+2020_1/about), 유시용 교수님
+K-mooc, [금융 AI](http://www.kmooc.kr/courses/course-v1:CAUk+CAU_AI03+2020_1/about), 중앙대학교 경영학부 유시용 교수님
 
 *자료 출처: 강의자료 (12-1강)
