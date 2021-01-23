@@ -1,5 +1,5 @@
 ---
-title: GloVe for Stock Price Prediction
+title: GloVe & NLP for Stock Price Prediction
 date: 2021-01-23 11:12:35
 categories:
 - Machine Learning
@@ -18,35 +18,36 @@ tags:
 
 ## GloVe
 
-### 벡터 차이의 의미 인코딩
+### GloVe Algorithm : 벡터 차이의 의미 인코딩
 
 동시발생 확률의 비율을 통해 의미 구성 요소를 인코딩한다.
 
-|              $x=\text{solid}$               | $x=\text{solid}$ | $x=\text{gas}$ | $x=\text{water}$ | $x=\text{random}$ |
-| :-----------------------------------------: | :--------------: | :------------: | :--------------: | :---------------: |
-|              $P(x|\text{ice})$              |      large       |     small      |      large       |       small       |
-|             $P(x|\text{steam})$             |      small       |     large      |      large       |       small       |
-| $\frac{P(x|\text{ice})}{P(x|\text{steam})}$ |      large       |     small      |        ~1        |        ~1         |
+- 핵심 아이디어 = 동시 발생 확률의 "비율"이 의미 구성 요소를 encode(해석)할 수 있다
 
-| $x=\text{solid}$                            | $x=\text{solid}$    | $x=\text{gas}$      | $x=\text{water}$    | $x=\text{random}$   |
-| ------------------------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| $P(x|\text{ice})$                           | $\text{1.9 x 10}^4$ | $\text{6.6 x 10}^5$ | $\text{3.0 x 10}^3$ | $\text{1.7 x 10}^5$ |
-| $P(x|\text{steam})$                         | $\text{2.2 x 10}^5$ | $\text{7.8 x 10}^4$ | $\text{2.2 x 10}^3$ | $\text{1.8 x 10}^5$ |
-| $\frac{P(x|\text{ice})}{P(x|\text{steam})}$ | 8.9                 | $\text{8.9 x 10}^2$ | 1.36                | 0.96                |
+![image-20210123112118221](https://i.loli.net/2021/01/23/MG4xtrAsu5THvqo.png)
+
+![image-20210123112209462](https://i.loli.net/2021/01/23/X3n9ZD6P57oz4Gg.png)
 
 
 
 ### 단어 벡터 공간에서 선형 의미 구성 요소로 동시 발생 확률의 비율을 사용하는 방법
 
 Log-bilinear 모형
+
+- 단어 벡터 공간에서 선형 의미의 구성 요소로 동시 발생 확률의 비율을 사용
+
+
 $$
 w_i\cdot w_j=log \ P(i \ | \ j)
 $$
 
-Log-bilinear 모형과 벡터의 차이
+
+
+Log-bilinear 모형
 
 - 동시 발생 확률의 비율값을 활용
-- 의미의 차이 = 비율의 차이
+- **백터의 차이값을 사용하여 동시 발생 확률의 비용을 적용**
+  - 의미의 차이 = 비율의 차이
 
 $$
 w_x \cdot (w_a - w_b) = log \ \frac{P(x \ | \ a)}{P(x \ | \ b)}
@@ -59,14 +60,15 @@ $$
 - Global Vectors for Word Representation
   - 카운트 기반 + 예측 기반 방법론 모두 사용
 - "GloVe: Global Vectors for Word Representation", Pennington et al., 2014
-  - 카운트 기반의 LSA와 예측 기반의 Word2Vec, 2개 접근법의 단점 보완
-  - 실제로는 Word2Vec과 유사한 성능을 보임 (상황별 적합한 모델 선택)
+  - 카운트 기반의 LSA(Latent Semantic Analysis)와 예측 기반의 Word2Vec 2개 접근법의 단점 보완
+  - 실제로는 Word2Vec과 유사한 성능을 보임
+  - case별 적합한 모델 선택
 
 
 
 **카운트 기반 : LSA**
 
-- 각 단어 빈도수를 카운트 한 행렬로 받아 차원 축소
+- 각 문서에 포함된 단어 빈도수를 카운트 한 행렬(=전체 통계 정보)로 받아 차원 축소
 - 특이값분해를 통해 의미 끌어내는 방법론
 - 카운트 기반, 말뭉치의 전체적인 통계 정보 고려
   - 단어 의미 유추 작업에는 성능 떨어짐
@@ -104,11 +106,11 @@ $$
 | **트윗**                              | "@" 기호 > "PERSON"<br /> "#" 기호 > "TOPIC"                 |
 | **정제**                              | 말뭉치의 노이즈 데이터 제거                                  |
 | **정규화**                            | 표현 방법이 다양한 단어들을 하나의 단어로 통합               |
-| **슬랭****                            | 정규화된 단어로 대체                                         |
+| **슬랭**                              | 속어를 정규화된 단어로 대체                                  |
 | **불용어**                            | 더 이상 사용되지 않으므로 제거                               |
 | **Negation**                          | 부정표현을 Negation이라는 토큰으로 대체                      |
-| **품사 태거**<br /> (Parts of Speech) | - 명사, 동사, 접속사 등 문법적인 표시로 주석 첨부<br />- 문장의 의미 유추에 도움 |
-| **Bag-of-Words**                      | - 단어들의 출현 빈도에 집중한 텍스트 데이터의 수치화 표현 방법<br / >- 단어의 unigram, bigram, n-gram 단계를 고려하여 감정 어휘를 사용해서 주관성 점수 제공 |
+| **품사 태거**<br /> (Parts of Speech) | - 명사, 동사, 형용사, 부사, 접속사 등 문법적인 표시로 주석 첨부<br />- 문장의 의미 유추에 도움 |
+| **Bag-of-Words**                      | - 단어들의 출현 빈도에 집중한 텍스트 데이터의 수치화 표현 방법 (순서 고려하지 않음)<br / >- 단어의 unigram, bigram, n-gram 단계를 고려하여 감정 어휘를 사용해서 주관성 점수 제공<br/>- 일반적으로 감성 분석에서는 bigram, trigram, n-gram이 unigram보다 나은 성능 |
 | **Feature Hashing** (FH)              | - 해시 태그가 지정된 단어는 작가가 직접 삽입한 감정과 레이블 >>> 매우 유용함 |
 
 
@@ -154,10 +156,10 @@ $$
 
 1. News collection
 2. Text preprocessing
-3. Poarity detection algorithm
+3. Polarity detection algorithm
 4. Set polarity score to news
 5. Document representation
-6. Classifier learning (model buildingl)
+6. Classifier learning (model building)
 7. System evaluation
 8. Test the model with new data
 9. Plot time series of past Adj_close price and scoring of news sentiment
@@ -177,7 +179,7 @@ $$
 감성분석 말고 뉴스 헤드라인의 문장 패턴을 구조 분석하면 어떨까?
 
 - 어휘 접근법 > 약 40% 예측
-- 어휘 접근법 + **문장 구조 분석** > 82-96% 예측
+- 어휘 접근법 + **문장 구조 분석** > **82-96%** 예측
 
 **> 문장 구조를 분석하는 것이 어휘만 분석하는 것보다 더 많은 정보량을 갖고 있다**
 
@@ -201,7 +203,7 @@ $$
 
 ### 자연어처리의 활용
 
-> "자연어처리에 관한 많은 논문들이 연구, 발표되고 있고 투자에도 활용되고 있다"
+> **"자연어처리에 관한 많은 논문들이 연구, 발표되고 있고 투자에도 활용되고 있다"**
 
 
 
