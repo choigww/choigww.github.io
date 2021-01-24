@@ -6,7 +6,11 @@ categories:
 - Machine Learning
 tags:
 - 머신러닝
-- 선형모델
+- 선형 모델
+- max function
+- hinge loss
+- 0-1 loss
+- logistic loss
 ---
 
 Linear Model은 선형방정식을 이용하여 벡터를 연산하는, 머신러닝에서 가장 기본적인 모델 중 하나입니다. 이 모델은 회귀와 분류 문제에 모두 활용할 수 있으며, 문제에 따라 각기 다른 학습 방법을 사용합니다. 이 주제에 대하여, 최근 수강하고 있는 [딥러닝의 깊이 있는 이해를 위한 머신러닝(k-mooc)](http://www.kmooc.kr/courses/course-v1:CAUk+CAU_A02+2020_1/about) 수업에 제출한 레포트를 공유합니다.
@@ -24,14 +28,18 @@ Linear Regressor는 0, 1 등 discrete하게 구분된 소수의 라벨을 구하
 ### Linear Regression Model 학습 방법
 
 Linear Regression Model은 연속적인 실수 라벨에 대하여 최대한 정확한 예측치를 출력하는 것을 목표로 한다. 이러한 문제를 해결하기 위해 Linear Regression Model은 학습의 척도로서 실제 라벨 값과 예측치 간의 차이를 최소화하는 Least Square를 가장 기본적인 형태로 채택한다.
+
+
 $$
 f(w) = \sum_{i=1}^{n}(wx_{i}-y_{i})^2
 $$
 
 
+
 따라서 Linear Regression Model은 Least Square 수식에 대한 최소값을 구하는 것을 목적으로 한다. 위 수식에 대한 최소값을 알아내기 위해서, w(가중치/파라미터)에 대하여 미분을 1회 적용한 값이 0이 되는 지점을 파악해야 한다.
 
 w는 특징의 차원 수(d)만큼 존재하므로, 각 값에 대하여 총 d번의 미분을 진행한다. 이는 우리가 알고 싶은 Least Square 값이 단순히 특정한 특징 차원에 대해서가 아닌, 모든 특징들이 이루는 차원 공간에서 실측치와 예측치의 차이를 최소화하는 w의 집합을 구하고자 하기 때문이다.
+
 
 
 $$
@@ -47,9 +55,11 @@ $$
 따라서 아래 식을 성립시키는 w가 우리가 구하고자 하는 w가 되며, 이를 Linear Regression 모델의 파라미터라고 한다.
 
 
+
 $$
 \nabla f(\mathbf{w})=\mathbf{Aw-b=X^TXw-X^Ty=0}
 $$
+
 
 
 Linear Regression Model은 연속적인 실수값을 예측하는 문제 뿐 아니라, classification 문제에 대해서도 사용 가능하다. 연속적인 실수 값을 범위로 무리지어 불연속적인 라벨을 할당하는 방법이 있는데, 예를 들면 0부터 1 사이의 범위를 10개 구간으로 등분한 10개의 라벨을 지정하는 것이다.
@@ -107,9 +117,12 @@ w가 모두 0이 될 때 Loss Function이 최소값을 출력하지 않도록, 0
 Logistic Loss Function은 모든 영역에 대하여 미분이 가능하며, 아래 그래프와 같이 Hinge Loss Function을 한 번 더 추정(approximation)한 형태라고 말할 수 있다. 이 외, w*x를 0과 1 사이로 강제하는 Sigmoid Function 등을 기반으로 Linear한 방식의 확률적 구분기를 만들 수도 있다.
 
 
+
 $$
 f(w)=\sum_{i=1}^nlog(1+exp(-y_i\mathbf{w}^T\mathbf{x}_i))
 $$
+
+
 
 
 
