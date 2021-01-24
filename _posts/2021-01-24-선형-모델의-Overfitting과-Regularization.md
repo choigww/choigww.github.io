@@ -261,13 +261,12 @@ f(\mathbf{w})=\frac{1}{2}||\mathbf{Xw-y}||^2+\frac{\lambda}{2}||\mathbf{w}||^2
 $$
 
 
+
+
 - 앞에 있는 term = 기존 활용하던 Least Square
-
 - 뒤에 있는 term = 특정 w가 커지지 않도록 조절
-
 - **Least Square와 동시에 w의 크기값도 함께 줄이려고 노력함**
-
-  $\boldsymbol{\to}$ **Regularization term**
+  - $\boldsymbol{\to}$ **Regularization term**
 
 - $\boldsymbol{\lambda}$ = Hyper Parameter
   - 람다가 커질수록 w값들의 크기가 더 작아짐
