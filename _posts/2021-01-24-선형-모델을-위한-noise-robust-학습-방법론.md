@@ -18,7 +18,7 @@ tags:
 
 *먼저 읽어보면 좋은 글 > [Linear Regressor vs. Linear Classifier](https://choigww.github.io/machine%20learning/2021/01/19/Linear-Regressor-vs-Linear-Classifier/)
 
-## 
+
 
 ### 알아볼 내용들
 
@@ -103,7 +103,7 @@ $$
 $$
 h(r_i)=
 \begin{cases}
-\frac{1}{2}, & \mbox{, for }|r_i|\leqq \epsilon \\
+\frac{1}{2}r_i^2, & \mbox{, for }|r_i|\leqq \epsilon \\
 \epsilon(|r_i|-\frac{1}{2}\epsilon), & \mbox{ , otherwise}
 \end{cases}
 $$
