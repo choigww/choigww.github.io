@@ -309,6 +309,8 @@ $$
   - 학습 안정성이 매우 높아지는 효과
   - regularization term을 추가함으로써 항상 w를 얻을 수 있다
 
+
+
 > **Regularization term 적용은 오버피팅 문제를 해결함과 동시에 학습 안정성도 높일 수 있는 아주 좋은 방법이 됨**
 >
 > **Regularization term은 거의 항상 고민되고 고려되고 추구되고 있음을 항상 기억할 것**
