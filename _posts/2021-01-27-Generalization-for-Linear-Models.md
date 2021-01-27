@@ -149,6 +149,13 @@ $$
 
 
 
+| Fit           | Cause                         | desired $\boldsymbol\lambda$ |
+| ------------- | ----------------------------- | ---------------------------- |
+| Over-fitting  | 오차 과대평가 (겁쟁이)        | increase++                   |
+| Under-fitting | 오차 과소평가 (끓는물 개구리) | decrease--                   |
+
+
+
 #### Regularized regression loss
 
 $$
