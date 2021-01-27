@@ -1,5 +1,5 @@
 ---
-title: Data Preprocessing: Concepts
+title: Data Preprocessing Concepts
 date: 2021-01-26 22:24:16
 categories:
 - Machine Learning
