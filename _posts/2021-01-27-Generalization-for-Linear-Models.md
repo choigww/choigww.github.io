@@ -121,6 +121,8 @@ $$
 
 ## Regularization
 
+### Term and Loss
+
 #### Idea
 
 - high-capacity 예측함수로 시작하여, 예측함수의 parameter weights 값에 페널티를 부여하는 **regularized loss**를 최적화함으로써 더 부드러운 형태의 lower-capacity 함수를 학습한다.
