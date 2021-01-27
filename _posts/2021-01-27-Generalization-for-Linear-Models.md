@@ -52,10 +52,10 @@ Generalization은 Supervised Learning으로 학습한 prediction 함수가 테�
 - 예측 모델이 큰 learning capacity를 갖고 있으므로, 트레이닝 데이터에 대해 loss를 매우 작게 최소화할 수 있음
   - 특정한 weight parameter에 큰 숫자를 부여하게 됨
 
+
 $$
 L(w) = \frac{1}{n}\sum_{i=1}^n(f_w(x_i)-y_i)^2\approx0
 $$
-
 
 
 * 그러나 전혀 본 적 없는 새로운 테스트 데이터에 대해서는 0에 가깝게 loss를 줄이는 데 실패 >>> 오버피팅**
@@ -104,12 +104,16 @@ $$
 ### Penalization
 
 가중치의 값이 커지는 것에 페널티를 부여함으로써 가중치를 작아지도록 강제할 수 있다.
+
+
 $$
 \underset{ \ \ w} min \frac{1}{n}\sum_{i=1}^n(f_w(x_i)-y_i)^2+1000\cdot w_3^2+1000 \cdot w_4^2
 $$
 
 
 $w_3, w_4$가 조금이라도 커지면 최소화하고자 하는 값 전체가 급격하게 증가하므로, $w_3, w_4$를 작은 값만 갖도록 강제하는 효과를 발생시킨다.
+
+
 $$
 f_w(x) = w_0+w_1x+w_2x^2+w_3x^3+w_4x^4 \ \ \ \underset{w_3, w_4 \approx 0}\implies \ \ \ f_w(x)=w_0+w_1x+w_2x^2
 $$
@@ -235,6 +239,8 @@ $$
 ### Normal Equation
 
 Solution of MSE loss with linear predictive function:
+
+
 $$
 L(w)=\frac{1}{n}(f_w(x_i)-y_i)^2 \\
 \big\Downarrow \\
@@ -245,6 +251,8 @@ $$
 ### Regularization with normal equation
 
 Regularized regression loss:
+
+
 $$
 L(w) = \frac{1}{n}\sum_{i=1}^n(f_w(x_i)-y_i)^2+\frac{\lambda}{d}\sum_{j=1}^dw_j^2\\
 \big\Downarrow \ \ \text{Matrix-vector representation} \\
@@ -253,6 +261,8 @@ $$
 
 
 Gradient:
+
+
 $$
 \frac{\partial}{\partial w} \ L(w)=\frac{\partial}{\partial w}\left[ \frac{1}{n}(Xw-y)^T(Xw-y)-\frac{\lambda}{d}w^Tw \right] \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 = \frac{1}{n}\frac{\partial}{\partial w} \left[ (w^TX^T-y^T)(Xw-y) \right]+\frac{\lambda}{d}\frac{\partial}{\partial w} \left[w^Tw\right] \\
@@ -272,6 +282,8 @@ $$
 
 
 **Examples**:
+
+
 $$
 a_{11}w_1+a_{12}w_2=b_1 \\
 a_{21}w_1+a_{22}w_2=b_2 \\
@@ -289,10 +301,10 @@ $$
 
 - Simply regularize!
 
+
 $$
 w = (X^TX+\frac{\lambda}{d}I)^{-1}X^Ty
 $$
-
 
 
 ---
