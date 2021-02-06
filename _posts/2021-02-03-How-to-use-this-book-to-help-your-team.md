@@ -6,8 +6,6 @@ categories:
 tags:
 - Machine Learning Yearning
 - Andrew Ng
-- deeplearning.ai
-- 머신러닝 실무 지침
 ---
 
 이 책을 모두 읽고 나면, 당신은 머신러닝 프로젝트의 기술적인 방향성을 설정하는 방법을 깊이 이해하게 될 겁니다. 하지만 팀 동료들은 당신이 제안하는 방향성을 이해하지 못할 수도 있습니다.

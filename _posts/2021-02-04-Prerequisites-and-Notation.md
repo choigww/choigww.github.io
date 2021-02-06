@@ -6,8 +6,6 @@ categories:
 tags:
 - Machine Learning Yearning
 - Andrew Ng
-- deeplearning.ai
-- 머신러닝 실무 지침
 ---
 
 만약 당신이 Coursera에 있는 Stanford Mahcine Learning 강좌를 들었거나, 지도학습을 적용해 본 경험이 있다면, 당신은 이 책을 이해할 수 있을 겁니다.
