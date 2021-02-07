@@ -5,7 +5,8 @@ categories:
 - ML Best Practice
 tags:
 - Machine Learning Yearning
-- Andrew Ng
+- Dev Set
+- Development Set
 ---
 
 앞서 살펴본 고양이 사진 탐지기로 돌아가 봅시다: 당신은 모바일 앱을 출시했고, 사용자들은 매우 다양한 사진들을 당신의 앱에 올리고 있습니다. 당신은 고양이 사진만 자동으로 찾아내고자 합니다.

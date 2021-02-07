@@ -5,7 +5,6 @@ categories:
 - ML Best Practice
 tags:
 - Machine Learning Yearning
-- Andrew Ng
 ---
 
 딥러닝(심층 신경망)이라는 아이디어 대부분은 수십년 전부터 존재헸습니다. 왜 최근이 되어서야 대세가 되었을까요?
