@@ -1,5 +1,5 @@
 ---
-title: Takeaways: Setting up development and test sets
+title: Takeaways for setting up development and test sets
 date: 2021-02-11 20:03:13
 categories:
 - ML Best Practice
