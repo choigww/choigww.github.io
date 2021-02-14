@@ -60,12 +60,6 @@ tags:
 
 [deeplearning.ai](https://www.deeplearning.ai)를 이끄는 Andrew Ng의 책, [MACHINE LEARNING YEARNING](https://d2wvfoqc9gyqzf.cloudfront.net/content/uploads/2018/09/Ng-MLY01-13.pdf?utm_campaign=MLY%20Ebook%20Email&utm_medium=email&_hsmi=78646066&_hsenc=p2ANqtz-8EN6pTX4f_zSAT80ls6z_VnjtNqRW5_6H7bwAgac2tcKhJ0ZXMwNquIMXhBZzXz2nL9v2cwqsEnEeEOlFfen_ZyuVQtw&utm_content=78646066&utm_source=hs_automation)은 머신러닝 프로젝트 수행에 있어 반드시 알아야 할 개념과 노하우를 담고 있습니다. 총 58편으로 이루어진 이 책을 1편씩 번역하여 게재합니다.
 
-### Machine Learning Yearning 이전 글
-
-1. [Why Machine Learning Strategy](https://choigww.github.io/ml%20best%20practice/2021/02/02/Why-Machine-Learning-Strategy/)
-2. [How to use this book to help your team](https://choigww.github.io/ml%20best%20practice/2021/02/03/How-to-use-this-book-to-help-your-team/)
-3. [Prerequisites and Notation](https://choigww.github.io/ml%20best%20practice/2021/02/04/Prerequisites-and-Notation/)
-
 ### Machine Learning Yearning 전체 목록 보기
 
 - [전체 글 리스트](https://choigww.github.io/tag/#/Machine%20Learning%20Yearning)
