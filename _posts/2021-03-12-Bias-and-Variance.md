@@ -1,5 +1,5 @@
 ---
-title: Bias and Variance: The two big sources of error
+title: Bias and Variance
 date: 2021-03-12 19:05:38
 categories:
 - ML Best Practice
